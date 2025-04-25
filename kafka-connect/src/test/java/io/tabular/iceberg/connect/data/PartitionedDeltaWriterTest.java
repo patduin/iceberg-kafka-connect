@@ -67,7 +67,7 @@ public class PartitionedDeltaWriterTest extends BaseWriterTest {
     assertThat(result.deleteFiles())
         .allMatch(file -> file.format() == FileFormat.fromString(format));
   }
-  
+
   @ParameterizedTest
   @ValueSource(strings = {"parquet", "orc"})
   public void testPartitionedDeltaWriterCDC(String format) {
